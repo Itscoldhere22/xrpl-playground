@@ -1,3 +1,9 @@
+import {Client, getNFTokenID} from "xrpl"
+import { mintNfts } from "./transactions/mintNfts";
+import { Wallet_1 } from "./wallet";
+import { getClient } from "./xrpl-client";
+import { getNfts } from "./transactions/getNfts";
+import { burnNfts } from "./transactions/burnNfts";
 import {Client, getNFTokenID, Wallet} from "xrpl"
 import { mintNfts } from "./transactions/mintNfts";
 import { Wallet_1 } from "./wallet";
@@ -9,6 +15,8 @@ const main = async () => {
     
     await client.connect();
     
+    // await mintNfts({}, Wallet_1, "Seat number: 17A");
+    await burnNfts(Wallet_1);
     const result_mint = await mintNfts({}, Wallet_1, "Seat number: 17A");
 
     const nftId = getNFTokenID(result_mint.result.meta);
