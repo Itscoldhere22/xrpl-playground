@@ -1,0 +1,31 @@
+{
+  "name": "xrpl-playground",
+  "version": "1.0.0",
+  "description": "My first XRPL project",
+  "homepage": "https://github.com/Itscoldhere22/xrpl-playground#readme",
+  "bugs": {
+    "url": "https://github.com/Itscoldhere22/xrpl-playground/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Itscoldhere22/xrpl-playground.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "run",
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "turbo": "^2.8.10",
+    "xrpl": "^4.6.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
