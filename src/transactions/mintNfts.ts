@@ -21,4 +21,6 @@ export const mintNfts = async ({URI, NFTokenTaxon, ...rests}: MintNftProps,
     });
 
     // console.log(response);
+
+    return response;
 };
