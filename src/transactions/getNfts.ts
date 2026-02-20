@@ -16,7 +16,7 @@ export const getNfts = async (wallet: Wallet) => {
     });
     
     // Filter NFTs by URI
-    const nft = allNfts.result.account_nfts.filter(nft => {
+    const nft = allNfts.result.account_nfts.find(nft => {
         if (!nft.URI) return false;
 
         // Decode URI from hex to UTF-8
@@ -24,7 +24,7 @@ export const getNfts = async (wallet: Wallet) => {
     });
 
     results = '\n=========\nTicket:\n' + JSON.stringify(nft, null, 2) + '\n=========';
-    // console.log(`Result: ${results}`);
+    console.log(`Result: ${results}`);
 
-    return nft;
+    return nft?.NFTokenID;
 }
