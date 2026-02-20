@@ -8,10 +8,10 @@ export const mintNfts = async ({URI, NFTokenTaxon, ...rests}: MintNftProps,
     wallet: Wallet, seat: string) => {
     const nftMint: NFTokenMint = {
         ...rests,
-        NFTokenTaxon: 0,
+        NFTokenTaxon: 59187,
         Account: wallet.address,
         TransactionType: "NFTokenMint",
-        Flags: 16,
+        Flags: 9,
         URI: convertStringToHex(seat),
     }
 
@@ -20,7 +20,7 @@ export const mintNfts = async ({URI, NFTokenTaxon, ...rests}: MintNftProps,
         wallet,
     });
 
-    // console.log(response);
+    console.log(response);
 
     return response;
 };
