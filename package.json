@@ -20,6 +20,8 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.995.0",
+    "@aws-sdk/client-s3": "^3.995.0",
     "dotenv": "^17.3.1",
     "turbo": "^2.8.10",
     "xrpl": "^4.6.0"
